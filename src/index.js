@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import RedditPageProvider from './components/RedditPageProvider'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RedditPageProvider>
+      <App />
+    </RedditPageProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
