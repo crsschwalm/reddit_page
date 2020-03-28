@@ -1,13 +1,14 @@
 import React from 'react';
+import formatPoints from '../services/format-points';
 
 const PostHead = ({ subreddit, upvoteCount, title }) => {
     return (
         <header className="post-head">
-            <span className="subreddit">
+            <a href={`https://reddit.com/${subreddit}`} className="subreddit">
                 {subreddit}
-            </span>
+            </a>
             <div className="title-group">
-                <span className="upvote">{upvoteCount}</span>
+                <span className="upvote">{formatPoints(upvoteCount)}</span>
                 <h1 className="title">{title}</h1>
             </div>
         </header>

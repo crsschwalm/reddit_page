@@ -19,6 +19,9 @@ section.comments-section {
                 }
                 .delete {
                     float: right;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
 

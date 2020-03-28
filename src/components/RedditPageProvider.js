@@ -11,6 +11,14 @@ const RedditPageProvider = ({ children }) => {
     const [comments, setComments] = useState([])
     const [page, setPage] = useState([])
 
+
+    const deleteComment = (oldCommentId) => setComments(comments.map(comment => {
+        if (comment.id === oldCommentId)
+            return { ...comment, author: "[deleted]", body: "[removed]", isDeleted: true, created_utc: new Date().getTime() }
+
+        return comment;
+    }))
+
     useEffect(() => {
         async function fetchPage() {
             const result = await fetch(REDDIT_URL);
@@ -23,7 +31,7 @@ const RedditPageProvider = ({ children }) => {
         fetchPage()
     }, [])
 
-    return <RedditPageContext.Provider value={{ page, comments }}>{children}</RedditPageContext.Provider>
+    return <RedditPageContext.Provider value={{ page, comments, deleteComment }}>{children}</RedditPageContext.Provider>
 }
 
 
