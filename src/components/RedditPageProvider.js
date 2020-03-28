@@ -14,7 +14,7 @@ const RedditPageProvider = ({ children }) => {
 
     const deleteComment = (oldCommentId) => setComments(comments.map(comment => {
         if (comment.id === oldCommentId)
-            return { ...comment, author: "[deleted]", body: "[removed]", isDeleted: true, created_utc: new Date().getTime() }
+            return { ...comment, author: "[deleted]", body_html: "[removed]", isDeleted: true, created_utc: new Date().getTime() }
 
         return comment;
     }))

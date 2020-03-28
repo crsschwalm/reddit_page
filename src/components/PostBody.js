@@ -8,7 +8,7 @@ const PostBody = ({ commentCount, bodyHTML }) => {
     return (
         <>
             <div dangerouslySetInnerHTML={normalizedBody()} />
-            <div className="comment-reference"><img className="icon" src={commentImg} /> {commentCount}</div>
+            <div className="comment-reference"><img className="icon" src={commentImg} alt="comment" /> {commentCount} Comments</div>
         </>
     )
 }

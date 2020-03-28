@@ -33,7 +33,7 @@ const Comment = ({ id, author, ups, downs, created_utc, isDeleted, body_html }) 
                         isDeleted ?
                             null :
                             <span className="delete" onClick={() => deleteComment(id)}>
-                                <img className="icon" src={deleteImg}></img>
+                                <img className="icon" src={deleteImg} alt="delete"></img>
                             </span>
                     }
                 </div>
