@@ -7,8 +7,8 @@ const PostHead = ({ subreddit, upvoteCount, title }) => {
                 {subreddit}
             </span>
             <div className="title-group">
-                <span>{upvoteCount}</span>
-                <h1>{title}</h1>
+                <span className="upvote">{upvoteCount}</span>
+                <h1 className="title">{title}</h1>
             </div>
         </header>
     )

@@ -1,0 +1,45 @@
+.body {
+    max-width: 960px;
+    padding: 0 1rem;
+    margin: auto;
+            
+    header.post-head {
+        padding: 2rem 0;
+
+        .subreddit {
+            color: rgba(88,88,88,0.87);
+            font-size: .75rem;
+        }
+        .title-group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .upvote {
+                color: #2C2C2C;
+                font-size: 1rem;
+                padding-right: 1rem;
+            }
+            .title {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    
+    .post-container {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        section.post-body {
+            border-radius: 12px;
+            background-color: #F1F1F1;
+            padding: 1.5rem 2.5rem;
+            p {
+
+            }
+            .comment-reference {
+                padding-top: 1rem;
+            }
+        }
+    }
+}

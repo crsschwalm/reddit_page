@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import App from './App';
+import App from './Page';
 import * as serviceWorker from './serviceWorker';
 import RedditPageProvider from './components/RedditPageProvider'
 
