@@ -1,9 +1,16 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import Page from './Page';
+import mocks from './mocks/reddit-page-mock'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<Page />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock('./components/RedditPageProvider', () => ({
+  useRedditPage: () => ({
+    ...mocks, deleteComment: jest.fn()
+  })
+}))
+
+test('should render', () => {
+  const subject = render(<Page />);
+
+  expect(subject).toMatchSnapshot();
 });
