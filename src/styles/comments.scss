@@ -2,7 +2,8 @@ section.comments-section {
     padding-top: 1.5rem;
     .comment-group {
         &.nested  {
-            border-left: 1px solid #EDEDED;            padding-left: 2rem;
+            border-left: 1px solid #EDEDED;            
+            padding-left: 2rem;
         }
 
         .comment {
@@ -12,6 +13,9 @@ section.comments-section {
                     font-size: .75rem;
                     padding-right: 1rem;
                     text-decoration: unset;
+                    &.deleted {
+                        color: grey;
+                    }
                 }
                 .upvotes, .time-ago {
                     color: rgba(0,0,0,0.87);
@@ -25,7 +29,7 @@ section.comments-section {
                 }
             }
 
-            p.comment-body {
+            .comment-body {
                 color: rgba(0,0,0,0.6);
                 font-size: 14px;
                 padding-right: 3rem;

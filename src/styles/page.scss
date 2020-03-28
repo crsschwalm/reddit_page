@@ -2,9 +2,13 @@
     max-width: 960px;
     padding: 0 1rem;
     margin: auto;
+
+    img.icon {
+        height: 14px;
+    }
             
     header.post-head {
-        padding: 2rem 0 .5rem 0;
+        padding: 2rem 0 .5rem 1.5rem;
 
         .subreddit {
             color: rgba(88,88,88,0.87);
